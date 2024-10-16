@@ -1,4 +1,4 @@
-package com.factordev.bottom_navbar;
+package com.factordev.template_float_bottom;
 
 import org.junit.Test;
 

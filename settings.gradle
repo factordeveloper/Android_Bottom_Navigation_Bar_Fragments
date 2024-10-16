@@ -19,6 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Bottom_NavBar"
-include(":app")
- 
+rootProject.name = "template_float_bottom"
+include ':app'

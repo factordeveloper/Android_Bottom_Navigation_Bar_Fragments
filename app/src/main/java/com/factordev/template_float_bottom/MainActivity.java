@@ -1,4 +1,4 @@
-package com.factordev.bottom_navbar;
+package com.factordev.template_float_bottom;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -7,8 +7,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-import com.factordev.bottom_navbar.databinding.ActivityMainBinding;
-import com.factordev.bottom_navbar.R;
+import com.factordev.template_float_bottom.databinding.ActivityMainBinding;
+import com.factordev.template_float_bottom.R;
 
 
 
@@ -25,25 +25,21 @@ public class MainActivity extends AppCompatActivity {
         replaceFragment(new HomeFragment());
         binding.bottomNavigationView.setBackground(null);
 
-        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+        binding.bottomNavigationView.setOnItemSelectedListener(items -> {
 
-            switch (item.getItemId()) {
-                case R.id.home:
+            binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+                if (item.getItemId() == R.id.home) {
                     replaceFragment(new HomeFragment());
-                    break;
-
-                case R.id.shorts:
+                } else if (item.getItemId() == R.id.shorts) {
                     replaceFragment(new ShortsFragment());
-                    break;
-
-                case R.id.subscriptions:
+                } else if (item.getItemId() == R.id.subscriptions) {
                     replaceFragment(new SubscriptionFragment());
-                    break;
-
-                case R.id.library:
+                } else if (item.getItemId() == R.id.library) {
                     replaceFragment(new LibraryFragment());
-                    break;
-            }
+                }
+                return true;
+            });
+
 
             return true;
 
