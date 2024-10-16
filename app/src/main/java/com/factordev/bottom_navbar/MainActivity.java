@@ -1,6 +1,5 @@
 package com.factordev.bottom_navbar;
 
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -8,7 +7,10 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-import com.example.bottomnavigation.databinding.ActivityMainBinding;
+import com.factordev.bottom_navbar.databinding.ActivityMainBinding;
+import com.factordev.bottom_navbar.R;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
